@@ -1,0 +1,50 @@
+leader:
+  name: Atsushi Tokuhisa
+  affiliation: RIKEN Center for Computational Science
+  position: Senior Scientist
+  role: Project Leader
+
+participants:
+  - name: Shigeyuki Matsumoto
+    affiliation: Graduate School of Medicine, Kyoto University
+    position: Program-Specific Associate Professor
+    role: Dissemination and advancement of deep-learning-based cryo-EM image analysis
+  - name: Takayuki Kato
+    affiliation: Institute for Protein Research, Osaka University
+    position: Professor
+    role: Application of structural ensemble analysis to target proteins and complex systems
+  - name: Junichi Kishikawa
+    affiliation: Faculty of Applied Biology, Kyoto Institute of Technology
+    position: Associate Professor
+    role: Structural ensemble analysis of enzymatic reactions involving conformational change
+  - name: Tomotaka Oroguchi
+    affiliation: Faculty of Science and Technology, Keio University
+    position: Assistant Professor
+    role: Pilot demonstration and multi-probe extension of MBGD-MD-SAXS
+  - name: Jun Ishii
+    affiliation: Graduate School of Science, Technology and Innovation, Kobe University
+    position: Professor
+    role: Antibody (scFv) sequence acquisition, sample preparation and property evaluation
+  - name: Mayumi Kamada
+    affiliation: Department of Data Science, School of Frontier Engineering, Kitasato University
+    position: Professor
+    role: Design and construction of the multi-layered database
+  - name: Yuji Shoya
+    affiliation: Pharma Foods International Co., Ltd.
+    position: Principal Researcher
+    role: scFv antibody acquisition by chicken immunization
+
+partners:
+  - name: Japan Synchrotron Radiation Research Institute (JASRI)
+    role: Advice on experimental data processing and analysis
+    url: https://www.jasri.jp/en/
+  - name: Hoshi University
+    role: OJT on deep-learning-based cryo-EM image analysis
+  - name: Kumamoto University
+    role: Advice on next-generation antibody design
+  - name: FMO Drug Design Consortium (FMODD)
+    role: Collaboration on FMO calculations and databases
+  - name: Life Intelligence Consortium (LINC)
+    role: Industry–academia collaboration for drug discovery
+  - name: Fujitsu Limited
+    role: AI application development
