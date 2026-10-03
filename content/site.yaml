@@ -12,13 +12,19 @@ englishEnabled: false
 # メインビジュアルの画像（public/images/ に置いたファイル）
 heroImage: /images/hero-fugaku.jpg
 
+# 英語略称（ヘッダー・タブ名に表示）
+abbr: ACE-SEP
+
 # ------------------------------------------------------------
 #  日本語
 # ------------------------------------------------------------
 ja:
-  # 課題名。\n の位置でメインビジュアルの改行が入ります
+  # 正式課題名。\n の位置でメインビジュアルの改行が入ります
   title: "次世代創薬を拓く\n実験・計算・AI融合型構造アンサンブル基盤"
-  shortTitle: 次世代構造アンサンブル基盤
+  # 略称（ヘッダーに「ACE-SEP｜略称」と表示）
+  shortTitle: 創薬構造アンサンブル基盤
+  # メインビジュアルで課題名に添える表記（英語表記）
+  subtitle: AI, Computation and Experiment–Integrated Structural Ensemble Platform
   program: 次世代計算科学グランドリーチプログラム
   lead: 富岳NEXTを見据え、国際的に普及するソフトウェア群と連動する実験・計算・AI融合型の構造アンサンブル解析基盤を開発・普及し、高分解能な多状態構造群と物性値に基づき、構造多様性を考慮した次世代創薬を拓きます。
   period: 2026年度 – 2030年度
@@ -27,6 +33,7 @@ ja:
   nav:
     - key: greeting
       label: 挨拶
+      heading: 課題代表者挨拶   # ページの見出し（省略するとメニュー名と同じ）
       sub: GREETING
       description: 課題代表者からのご挨拶
     - key: overview
@@ -50,8 +57,10 @@ ja:
 #  English（englishEnabled: true にすると公開されます）
 # ------------------------------------------------------------
 en:
-  title: Experiment–Computation–AI Integrated Structural Ensemble Platform for Next-Generation Drug Discovery
-  shortTitle: Next-Gen Structural Ensemble Platform
+  title: AI, Computation and Experiment–Integrated Structural Ensemble Platform
+  # 英語版ヘッダーは略称（ACE-SEP）のみ表示する場合は空欄
+  shortTitle:
+  subtitle: 次世代創薬を拓く実験・計算・AI融合型構造アンサンブル基盤
   program: Next-Generation Computational Science Grand Reach Program
   lead: Looking ahead to FugakuNEXT, we develop and disseminate an integrated experiment–computation–AI platform for structural ensemble analysis, opening the way to drug discovery that accounts for structural diversity.
   period: FY2026 – FY2030
@@ -59,6 +68,7 @@ en:
   nav:
     - key: greeting
       label: Greeting
+      heading: Message from the Project Leader
       sub: GREETING
       description: Message from the project leader
     - key: overview

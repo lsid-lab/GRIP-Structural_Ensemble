@@ -74,6 +74,9 @@ h1, h2, h3 { line-height: 1.4; }
   display: flex; align-items: center; gap: 10px;
   color: #fff; text-decoration: none; font-weight: 700; letter-spacing: 0.04em;
 }
+.brand-abbr { font-size: 1.05rem; letter-spacing: 0.06em; }
+.brand-sep { color: var(--teal-500); margin: 0 -4px; }
+.brand-text { font-size: 0.95rem; }
 .brand-mark {
   width: 22px; height: 22px; border-radius: 6px;
   background: var(--gradient);
@@ -127,6 +130,11 @@ h1, h2, h3 { line-height: 1.4; }
   margin: 0; white-space: pre-line;
   font-size: clamp(1.6rem, 3.6vw, 2.75rem); font-weight: 700; letter-spacing: 0.03em;
   text-shadow: 0 2px 18px rgba(0, 0, 0, 0.4);
+}
+.hero-subtitle {
+  margin: 14px 0 0; max-width: 40em;
+  font-size: clamp(0.95rem, 1.5vw, 1.15rem); letter-spacing: 0.02em; line-height: 1.5;
+  color: rgba(255, 255, 255, 0.82);
 }
 .hero-short {
   display: inline-block; margin: 22px 0 0; padding: 4px 16px; border-radius: 999px;
@@ -224,6 +232,11 @@ h1, h2, h3 { line-height: 1.4; }
 }
 
 /* Markdown 本文 */
+.prose-lead {
+  margin: 0 0 40px; padding: 18px 24px; border-radius: var(--radius);
+  background: var(--bg-soft); border-left: 5px solid var(--teal-500);
+  font-size: 1.15rem; font-weight: 700; line-height: 1.6;
+}
 .prose h2 {
   margin: 2.4em 0 0.8em; padding: 0 0 0 14px; font-size: 1.35rem; border-left: 4px solid var(--teal-500);
 }
@@ -245,10 +258,11 @@ h1, h2, h3 { line-height: 1.4; }
   background: linear-gradient(160deg, var(--navy-800), var(--teal-500));
 }
 .greeting-photo figcaption { margin-top: 12px; font-size: 0.85rem; color: var(--muted); }
-.greeting-photo figcaption strong { color: var(--ink); font-size: 1.05rem; }
+.greeting-photo figcaption span { display: block; }
+.greeting-photo figcaption span:last-child { color: var(--ink); font-size: 1rem; font-weight: 700; }
 .signature { margin-top: 40px; text-align: right; display: flex; flex-direction: column; }
-.signature span { font-size: 0.9rem; color: var(--muted); }
-.signature strong { font-size: 1.25rem; letter-spacing: 0.1em; }
+.signature span { font-size: 0.95rem; }
+.signature span:last-child { font-size: 1.15rem; font-weight: 700; letter-spacing: 0.06em; }
 
 /* 研究体制 */
 .leader-card {
@@ -321,6 +335,9 @@ h1, h2, h3 { line-height: 1.4; }
   .hero { min-height: 0; padding: 40px 0 88px; }
   .hero-program { font-size: 0.75rem; }
   .hero-title { font-size: 1.4rem; }
+  .brand-mark { display: none; }
+  .brand-abbr { font-size: 0.95rem; }
+  .brand-text { font-size: 0.8rem; }
   .home-news { margin-top: -56px; }
   .home-news-card { grid-template-columns: 1fr; gap: 8px; padding: 20px; }
   .home-news-head { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }

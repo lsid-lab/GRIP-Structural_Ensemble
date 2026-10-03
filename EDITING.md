@@ -67,8 +67,15 @@ Markdown 形式です。
 2. 横幅は 1600px 程度まで、1枚 500KB 程度までに縮小してから置く
 3. 各ファイルから `/images/kickoff-2026.jpg` のように指定する
 
-### 代表者の写真を載せる
-`public/images/` に写真を置き、`content/ja/greeting.md` の `photo:` に `/images/ファイル名` を書きます。
+### 代表者の写真・署名を変える
+`content/ja/greeting.md` の先頭部分で設定します。
+- `photo:` … 写真（`public/images/` に置いて `/images/ファイル名`）
+- `signature:` … 本文末尾と写真下に出る署名（1行ずつ `- ` で書く）
+
+### 略称・課題名・英語表記を変える → `content/site.yaml`
+- `abbr:` … 英語略称（ACE-SEP）
+- `ja: > title:` … 正式課題名、`shortTitle:` … 略称、`subtitle:` … トップに添える英語表記
+- メニューの `heading:` … ページ見出し（メニュー名と違う見出しにしたいとき）
 
 ## 3. 英語版
 `content/en/` に同じ構成のファイルがあります。英語版を公開するときは `content/site.yaml` の `englishEnabled: true` にします（ヘッダーに言語切替が出ます）。

@@ -31,12 +31,14 @@ const optionalText = z.string().nullish().transform((v) => v || undefined);
 const navItem = z.object({
   key: z.enum(PAGE_KEYS, { error: `key は ${PAGE_KEYS.join(' / ')} のいずれかです` }),
   label: text,
+  heading: optionalText,
   sub: text,
   description: optionalText,
 });
 const siteLang = z.object({
   title: text,
-  shortTitle: text,
+  shortTitle: optionalText,
+  subtitle: optionalText,
   program: text,
   lead: text,
   period: text,
@@ -47,6 +49,7 @@ const siteSchema = z.object({
   noindex: z.boolean().default(true),
   englishEnabled: z.boolean().default(false),
   heroImage: text,
+  abbr: text,
   ja: siteLang,
   en: siteLang,
 });
@@ -91,6 +94,8 @@ const outreachSchema = z.object({
 const frontSchema = z.object({
   draft: z.boolean().default(false),
   photo: optionalText,
+  lead: optionalText,
+  signature: z.array(text).nullish().transform((v) => v ?? undefined),
 });
 
 // ---------- 読み込み処理 ----------
@@ -133,6 +138,12 @@ function loadMarkdown(path: string) {
 }
 
 export const site = loadYaml('site.yaml', siteSchema);
+
+/** ヘッダー等に出す名称（例：ACE-SEP｜創薬構造アンサンブル基盤） */
+export function brandName(lang: Lang): string {
+  const short = site[lang].shortTitle;
+  return short ? `${site.abbr}｜${short}` : site.abbr;
+}
 
 /** 課題名の改行（\n）を取り除いた1行版（タブ名・フッター用） */
 export function oneLine(s: string): string {
@@ -192,8 +203,9 @@ export function pageTitle(pathname: string): string {
   const { lang, key } = parsePath(pathname);
   const s = site[lang];
   if (key === 'home') return oneLine(s.title);
-  const label = key ? s.nav.find((n) => n.key === key)?.label : lang === 'ja' ? 'ページが見つかりません' : 'Not Found';
-  return `${label ?? key} | ${s.shortTitle}`;
+  const nav = key ? s.nav.find((n) => n.key === key) : undefined;
+  const label = nav ? (nav.heading ?? nav.label) : lang === 'ja' ? 'ページが見つかりません' : 'Not Found';
+  return `${label} | ${brandName(lang)}`;
 }
 
 export function formatDate(d: string): string {

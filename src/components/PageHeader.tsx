@@ -8,7 +8,7 @@ export default function PageHeader({ pageKey }: { pageKey: PageKey }) {
     <section className="page-header" style={{ backgroundImage: `url(${withBase(siteConfig.heroImage)})` }}>
       <div className="container">
         <p className="page-header-sub">{nav?.sub}</p>
-        <h1>{nav?.label ?? pageKey}</h1>
+        <h1>{nav?.heading ?? nav?.label ?? pageKey}</h1>
       </div>
     </section>
   );

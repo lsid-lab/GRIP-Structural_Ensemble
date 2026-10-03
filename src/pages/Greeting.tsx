@@ -7,6 +7,8 @@ export default function Greeting() {
   const { greeting, members } = useContent();
   const leader = members.leader;
   const photo = greeting.photo ?? leader.photo;
+  // 署名：greeting.md の signature があればそれを、無ければ members.yaml の代表者情報を使う
+  const signature = greeting.signature ?? [`${leader.affiliation} ${leader.position ?? ''}`.trim(), leader.name];
   return (
     <>
       <PageHeader pageKey="greeting" />
@@ -14,8 +16,9 @@ export default function Greeting() {
         <div className="greeting-text">
           <Prose html={greeting.html} draft={greeting.draft} />
           <p className="signature">
-            <span>{leader.affiliation} {leader.position}</span>
-            <strong>{leader.name}</strong>
+            {signature.map((line, i) => (
+              <span key={i}>{line}</span>
+            ))}
           </p>
         </div>
         <figure className="greeting-photo">
@@ -27,9 +30,9 @@ export default function Greeting() {
             </div>
           )}
           <figcaption>
-            {leader.role}
-            <br />
-            <strong>{leader.name}</strong>
+            {signature.map((line, i) => (
+              <span key={i}>{line}</span>
+            ))}
           </figcaption>
         </figure>
       </div>

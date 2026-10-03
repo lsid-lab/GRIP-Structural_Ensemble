@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link, NavLink, Outlet, useLocation } from 'react-router-dom';
-import { getContent, languages, oneLine, pageTitle, parsePath, pathFor, type Lang } from '../content';
+import { brandName, getContent, languages, oneLine, pageTitle, parsePath, pathFor, type Lang } from '../content';
 import { ContentContext } from '../context';
 
 export default function Layout({ lang }: { lang: Lang }) {
@@ -17,6 +17,7 @@ export default function Layout({ lang }: { lang: Lang }) {
   }, [pathname, lang]);
 
   const { key } = parsePath(pathname);
+  const siteAbbr = brandName(lang).split('｜')[0];
   const otherLang: Lang = lang === 'ja' ? 'en' : 'ja';
 
   return (
@@ -25,7 +26,13 @@ export default function Layout({ lang }: { lang: Lang }) {
         <div className="container header-inner">
           <Link to={pathFor(lang, 'home')} className="brand">
             <span className="brand-mark" aria-hidden="true" />
-            <span className="brand-text">{site.shortTitle}</span>
+            <span className="brand-abbr">{siteAbbr}</span>
+            {site.shortTitle && (
+              <>
+                <span className="brand-sep" aria-hidden="true">｜</span>
+                <span className="brand-text">{site.shortTitle}</span>
+              </>
+            )}
           </Link>
           <button
             className="menu-button"
@@ -72,7 +79,7 @@ export default function Layout({ lang }: { lang: Lang }) {
             ))}
           </ul>
         </div>
-        <div className="container footer-copy">© {new Date().getFullYear()} {site.shortTitle}</div>
+        <div className="container footer-copy">© {new Date().getFullYear()} {brandName(lang)}</div>
       </footer>
     </ContentContext.Provider>
   );

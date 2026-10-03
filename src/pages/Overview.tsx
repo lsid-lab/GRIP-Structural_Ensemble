@@ -8,7 +8,7 @@ export default function Overview() {
     <>
       <PageHeader pageKey="overview" />
       <div className="container page-body narrow">
-        <Prose html={overview.html} draft={overview.draft} />
+        <Prose html={overview.html} draft={overview.draft} lead={overview.lead} />
       </div>
     </>
   );

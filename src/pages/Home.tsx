@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { pathFor, site as siteConfig, withBase } from '../content';
+import { brandName, pathFor, site as siteConfig, withBase } from '../content';
 import { useContent } from '../context';
 import NewsList from '../components/NewsList';
 
@@ -16,7 +16,8 @@ export default function Home() {
         <div className="container hero-inner">
           <p className="hero-program">{site.program}</p>
           <h1 className="hero-title">{site.title}</h1>
-          <p className="hero-short">{site.shortTitle}</p>
+          {site.subtitle && <p className="hero-subtitle">{site.subtitle}</p>}
+          <p className="hero-short">{brandName(lang)}</p>
           <p className="hero-period">
             {ja ? '実施期間' : 'Period'}：{site.period}
           </p>
