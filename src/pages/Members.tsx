@@ -61,13 +61,13 @@ export default function Members() {
       <PageHeader pageKey="members" />
       <div className="container page-body">
         <section className="section">
-          <h2 className="section-title">{ja ? '課題代表者' : 'Project Leader'}</h2>
+          <h2 className="section-title">{ja ? '課題代表機関' : 'Lead Institution'}</h2>
           <GroupCard group={leader} ja={ja} />
         </section>
 
         {groups.length > 0 && (
           <section className="section">
-            <h2 className="section-title">{ja ? '分担研究者' : 'Co-Investigators'}</h2>
+            <h2 className="section-title">{ja ? '分担研究機関' : 'Collaborating Institutions'}</h2>
             <div className="group-grid">
               {groups.map((g, i) => (
                 <GroupCard key={i} group={g} ja={ja} />
