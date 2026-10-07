@@ -52,7 +52,16 @@ items:
 ```
 
 ### メンバーを追加・修正する → `content/ja/members.yaml`
-`participants:` の下に、既存の1人分（`- name:` から4行）をコピーして書き換えます。
+体制は「グループ」単位です（課題代表者 `leader:` と、分担研究者 `groups:` の各人）。
+- **研究参加者を追加**：そのグループの `members:` の下に1行追加します（人数は自由）。
+  ```yaml
+    members:
+      - name: 理研 太郎
+        position: 特別研究員        # 省略可
+        photo: /images/members/riken-taro.jpg   # 省略するとシルエット表示
+  ```
+- **分担研究者（グループ）を追加**：`groups:` の下の既存の1グループ分（`- name:` から `members:` の終わりまで）をコピーして書き換えます。
+- **写真**：`public/images/members/` に置きます。正方形に切り抜かれて表示されるので、顔が中央に来る写真にしてください（横400px程度、メタデータ除去）。
 
 ### 挨拶・研究概要の文章を直す → `content/ja/greeting.md` / `overview.md`
 Markdown 形式です。

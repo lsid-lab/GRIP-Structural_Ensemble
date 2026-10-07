@@ -3,43 +3,90 @@
 #  ※ 電話番号・メールアドレスは掲載しません
 # ============================================================
 
+# ------------------------------------------------------------
+#  書き方
+#  ・グループ（課題代表者・分担研究者）ごとに、代表者の情報と
+#    「members:」（研究参加者）を書きます。参加者の人数は自由です（0人なら members: ごと省略可）
+#  ・photo: は public/images/members/ に写真を置いて /images/members/ファイル名 と書きます。
+#    省略するとシルエットが表示されます
+#  ・研究参加者の affiliation（所属）・position（職位）は省略できます
+#  ※「氏名（仮）」は写真・氏名がそろうまでの仮置きです
+# ------------------------------------------------------------
+
 # 課題代表者
 leader:
   name: 德久 淳師
   affiliation: 理化学研究所 計算科学研究センター
   position: 上級研究員
   role: 課題代表者／研究開発の統括
+  photo: /images/leader-tokuhisa.jpg
+  members:
+    - name: 氏名（仮）
+    - name: 氏名（仮）
+    - name: 氏名（仮）
 
-# 研究参加者（追加するときは「- name:」から4行をコピーして貼り付け）
-participants:
+# 分担研究者（グループを追加するときは「- name:」から members の終わりまでをコピー）
+groups:
   - name: 松本 篤幸
     affiliation: 京都大学 大学院医学研究科
     position: 特定准教授
     role: 深層学習技術を用いたcryo-EMデータのイメージ解析技術の普及と高度化
+    # photo: /images/members/ファイル名.jpg
+    members:
+      - name: 氏名（仮）
+      - name: 氏名（仮）
+      - name: 氏名（仮）
+
   - name: 加藤 貴之
     affiliation: 大阪大学 蛋白質研究所
     position: 教授
     role: 標的蛋白質への構造アンサンブル解析の適用と、細胞観測を目指した複雑系への展開
+    # photo: /images/members/ファイル名.jpg
+    members:
+      - name: 氏名（仮）
+      - name: 氏名（仮）
+      - name: 氏名（仮）
+
   - name: 岸川 淳一
     affiliation: 京都工芸繊維大学 応用生物学系
     position: 准教授
     role: 構造変化を伴う酵素反応を標的とした構造アンサンブル解析の適用
+    # photo: /images/members/ファイル名.jpg
+    members:
+      - name: 氏名（仮）
+      - name: 氏名（仮）
+
   - name: 苙口 友隆
     affiliation: 慶應義塾大学 理工学部
     position: 専任講師
     role: MBGD-MD-SAXS法による構造アンサンブル解析基盤の先導実証とマルチプローブ化による高度化
+    # photo: /images/members/ファイル名.jpg
+    members:
+      - name: 氏名（仮）
+
   - name: 石井 純
     affiliation: 神戸大学 大学院科学技術イノベーション研究科
     position: 教授
     role: scFv等の抗体配列取得および試料調製・物性評価
+    # photo: /images/members/ファイル名.jpg
+    members:
+      - name: 氏名（仮）
+      - name: 氏名（仮）
+
   - name: 鎌田 真由美
     affiliation: 北里大学 未来工学部 データサイエンス学科
     position: 教授
     role: 多階層データベース設計／構築
+    # photo: /images/members/ファイル名.jpg
+    members:
+      - name: 氏名（仮）
+      - name: 氏名（仮）
+
   - name: 庄屋 雄二
     affiliation: 株式会社ファーマフーズ 創薬本部 バイオメディカル部
     position: 主席研究員
     role: ニワトリ免疫によるscFv抗体取得
+    # photo: /images/members/ファイル名.jpg
 
 # 連携機関（url は省略可）
 partners:

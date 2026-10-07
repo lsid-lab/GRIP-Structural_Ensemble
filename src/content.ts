@@ -66,9 +66,19 @@ const person = z.object({
   role: optionalText,
   photo: optionalText,
 });
+// 研究参加者（グループ内のメンバー）。所属は省略するとグループ代表者と同じ扱い
+const groupMember = z.object({
+  name: text,
+  affiliation: optionalText,
+  position: optionalText,
+  photo: optionalText,
+});
+const memberList = z.array(groupMember).nullish().transform((v) => v ?? []);
+// グループ代表者（課題代表者・分担研究者）と、その下の研究参加者
+const groupLead = person.extend({ members: memberList });
 const membersSchema = z.object({
-  leader: person,
-  participants: z.array(person).nullish().transform((v) => v ?? []),
+  leader: groupLead,
+  groups: z.array(groupLead).nullish().transform((v) => v ?? []),
   partners: z
     .array(z.object({ name: text, role: optionalText, url: optionalText }))
     .nullish()
