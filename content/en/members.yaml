@@ -3,12 +3,86 @@ leader:
   affiliation: RIKEN Center for Computational Science
   position: Senior Scientist
   role: Project Leader
+  photo: /images/leader-tokuhisa.jpg
+  members:
+    - name: Hiroki Shirai
+      position: Deputy Division Director
+      photo: /images/members/shirai-hiroki.jpg
+    - name: Yoshinobu Akinaga
+      position: Senior Technical Scientist
+      photo: /images/members/akinaga-yoshinobu.jpg
+    - name: Tamaki Senga
+      position: Technical Assistant
+      photo: /images/members/senga-tamaki.jpg
+    - name: Takashi Oishi
+      position: Technical Assistant
+      photo: /images/members/oishi-takashi.jpg
+    - name: Tsutomu Yamane
+      position: Senior Scientist
+      photo: /images/members/yamane-tsutomu.jpg
+    - name: Kazuyoshi Ikeda
+      position: Unit Leader
+      photo: /images/members/ikeda-kazuyoshi.jpg
+    - name: Yugo Shimizu
+      position: Research Scientist
+      photo: /images/members/shimizu-yugo.jpg
+    - name: Toshihiko Kai
+      position: Unit Leader
+      photo: /images/members/kai-toshihiko.jpg
+    - name: Hiroshi Harada
+      position: Special Temporary Technical Scientist
+      photo: /images/members/harada-hiroshi.jpg
+    - name: Hidetomo Kaneyama
+      position: Technical Scientist
+      photo: /images/members/kaneyama-hidetomo.jpg
+    - name: Ryo Kanada
+      position: Senior Research Scientist
+    - name: Hitoshi Murai
+      position: Unit Leader
+    - name: Motohiko Matsuda
+      position: Technical Scientist
+    - name: Sizhang Liu
+      position: Technical Assistant
+    - name: Biao Ma
+      position: Research Scientist
+    - name: Keiko Matsuoka
+      position: Assistant
+
+lead_groups:
+  - name: Nobutaka Shimizu
+    affiliation: RIKEN SPring-8 Center
+    position: Group Director
+    role: SAXS experimental measurements and data processing
+    photo: /images/members/shimizu-nobutaka.jpg
+    members:
+      - name: Hideo Ago
+        position: Senior Research Scientist
+        photo: /images/members/ago-hideo.jpg
+      - name: Hiroshi Sekiguchi
+        position: Visiting Research Scientist (JASRI)
+        photo: /images/members/sekiguchi-hiroshi.jpg
+      - name: Satoshi Nagao
+        position: Visiting Research Scientist (JASRI)
+        photo: /images/members/nagao-satoshi.jpg
+      - name: Sara Imamura
+        position: Student Trainee (University of Hyogo)
+        photo: /images/members/imamura-sara.jpg
+      - name: Sae Kawauchi
+        position: Student Trainee (University of Hyogo)
+        photo: /images/members/kawauchi-sae.jpg
+      - name: Yui Toyoda
+        position: Student Trainee (University of Hyogo)
+        photo: /images/members/toyoda-yui.jpg
+      - name: Nanase Hara
+        position: Student Trainee (University of Hyogo)
+        photo: /images/members/hara-nanase.jpg
 
 groups:
   - name: Shigeyuki Matsumoto
     affiliation: Graduate School of Medicine, Kyoto University
     position: Program-Specific Associate Professor
     role: Dissemination and advancement of deep-learning-based cryo-EM image analysis
+    photo: /images/members/matsumoto-shigeyuki.jpg
   - name: Takayuki Kato
     affiliation: Institute for Protein Research, Osaka University
     position: Professor
@@ -17,6 +91,14 @@ groups:
     affiliation: Faculty of Applied Biology, Kyoto Institute of Technology
     position: Associate Professor
     role: Structural ensemble analysis of enzymatic reactions involving conformational change
+    photo: /images/members/kishikawa-junichi.jpg
+    members:
+      - name: Ryo Hatanaka
+        position: Ph.D. Student
+        photo: /images/members/hatanaka-ryo.jpg
+      - name: Shoki Sugie
+        position: Master's Student
+        photo: /images/members/sugie-shoki.jpg
   - name: Tomotaka Oroguchi
     affiliation: Faculty of Science and Technology, Keio University
     position: Assistant Professor
@@ -25,10 +107,53 @@ groups:
     affiliation: Graduate School of Science, Technology and Innovation, Kobe University
     position: Professor
     role: Antibody (scFv) sequence acquisition, sample preparation and property evaluation
+    photo: /images/members/ishii-jun.jpg
+    members:
+      - name: Yoichiro Ito
+        position: Project Associate Professor
+        photo: /images/members/ito-yoichiro.jpg
+      - name: Takahiro Sawada
+        position: Project Assistant Professor
+        photo: /images/members/sawada-takahiro.jpg
+      - name: Ririka Asama
+        position: Project Assistant Professor
+        photo: /images/members/asama-ririka.jpg
+      - name: Naoki Watanabe
+        position: Project Assistant Professor
+        photo: /images/members/watanabe-naoki.jpg
+      - name: Masahiro Murata
+        position: Project Research Associate
+        photo: /images/members/murata-masahiro.jpg
+      - name: Masahiro Tominaga
+        position: Associate Professor
+        photo: /images/members/tominaga-masahiro.jpg
+      - name: Masaki Matsumoto
+        position: Master's Student (2nd year)
+        photo: /images/members/matsumoto-masaki.jpg
+      - name: Akito Odani
+        position: Ph.D. Student (1st year)
+        photo: /images/members/odani-akito.jpg
+      - name: Shintaro Nemoto
+        position: Ph.D. Student (2nd year)
+        photo: /images/members/nemoto-shintaro.jpg
   - name: Mayumi Kamada
     affiliation: Department of Data Science, School of Frontier Engineering, Kitasato University
     position: Professor
     role: Design and construction of the multi-layered database
+    photo: /images/members/kamada-mayumi.jpg
+    members:
+      - name: Shuichiro Makigaki
+        position: Assistant Professor
+        photo: /images/members/makigaki-shuichiro.jpg
+      - name: Hiromu Mihashi
+        position: Undergraduate Student
+        photo: /images/members/mihashi-hiromu.jpg
+      - name: Koki Kashiwagi
+        position: Undergraduate Student
+        photo: /images/members/kashiwagi-koki.jpg
+      - name: Yuki Masuyama
+        position: Undergraduate Student
+        photo: /images/members/masuyama-yuki.jpg
   - name: Yuji Shoya
     affiliation: Pharma Foods International Co., Ltd.
     position: Principal Researcher

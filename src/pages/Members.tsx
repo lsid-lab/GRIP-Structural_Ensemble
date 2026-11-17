@@ -55,14 +55,19 @@ function GroupCard({ group, ja }: { group: GroupLead; ja: boolean }) {
 export default function Members() {
   const { lang, members } = useContent();
   const ja = lang === 'ja';
-  const { leader, groups, partners } = members;
+  const { leader, lead_groups: leadGroups, groups, partners } = members;
   return (
     <>
       <PageHeader pageKey="members" />
       <div className="container page-body">
         <section className="section">
           <h2 className="section-title">{ja ? '課題代表機関' : 'Lead Institution'}</h2>
-          <GroupCard group={leader} ja={ja} />
+          <div className="group-stack">
+            <GroupCard group={leader} ja={ja} />
+            {leadGroups.map((g, i) => (
+              <GroupCard key={i} group={g} ja={ja} />
+            ))}
+          </div>
         </section>
 
         {groups.length > 0 && (

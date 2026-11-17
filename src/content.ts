@@ -78,6 +78,8 @@ const memberList = z.array(groupMember).nullish().transform((v) => v ?? []);
 const groupLead = person.extend({ members: memberList });
 const membersSchema = z.object({
   leader: groupLead,
+  // 課題代表機関のほかのグループ（理研の清水Gなど）。課題代表者のカードの下に並ぶ
+  lead_groups: z.array(groupLead).nullish().transform((v) => v ?? []),
   groups: z.array(groupLead).nullish().transform((v) => v ?? []),
   partners: z
     .array(z.object({ name: text, role: optionalText, url: optionalText }))

@@ -21,9 +21,78 @@ leader:
   role: 課題代表者／研究開発の統括
   photo: /images/leader-tokuhisa.jpg
   members:
-    - name: 氏名（仮）
-    - name: 氏名（仮）
-    - name: 氏名（仮）
+    - name: 白井 宏樹
+      position: 副部門長
+      photo: /images/members/shirai-hiroki.jpg
+    - name: 秋永 宜伸
+      position: 上級技師
+      photo: /images/members/akinaga-yoshinobu.jpg
+    - name: 千賀 環希
+      position: 技術補佐員
+      photo: /images/members/senga-tamaki.jpg
+    - name: 大石 貴史
+      position: 技術補佐員
+      photo: /images/members/oishi-takashi.jpg
+    - name: 山根 努
+      position: 上級研究員
+      photo: /images/members/yamane-tsutomu.jpg
+    - name: 池田 和由
+      position: ユニットリーダー
+      photo: /images/members/ikeda-kazuyoshi.jpg
+    - name: 清水 祐吾
+      position: 研究員
+      photo: /images/members/shimizu-yugo.jpg
+    - name: 甲斐 俊彦
+      position: ユニットリーダー
+      photo: /images/members/kai-toshihiko.jpg
+    - name: 原田 浩
+      position: 特別嘱託技師
+      photo: /images/members/harada-hiroshi.jpg
+    - name: 金山 秀智
+      position: 技師
+      photo: /images/members/kaneyama-hidetomo.jpg
+    - name: 金田 亮
+      position: 上級研究員
+    - name: 村井 均
+      position: ユニットリーダー
+    - name: 松田 元彦
+      position: 技師
+    - name: Liu Sizhang
+      position: 技術補佐員
+    - name: 馬 彪
+      position: 研究員
+    - name: 松岡 啓子
+      position: アシスタント
+
+# 課題代表機関のほかのグループ（理研 清水G）
+lead_groups:
+  - name: 清水 伸隆
+    affiliation: 理化学研究所 放射光科学研究センター
+    position: グループディレクター
+    role: SAXS実測計測・データ処理
+    photo: /images/members/shimizu-nobutaka.jpg
+    members:
+      - name: 吾郷 日出夫
+        position: 上級研究員
+        photo: /images/members/ago-hideo.jpg
+      - name: 関口 博史
+        position: 客員研究員（本務：高輝度光科学研究センター 主幹研究員）
+        photo: /images/members/sekiguchi-hiroshi.jpg
+      - name: 長尾 聡
+        position: 客員研究員（本務：高輝度光科学研究センター 研究員）
+        photo: /images/members/nagao-satoshi.jpg
+      - name: 今村 彩良
+        position: 研修生（兵庫県立大学大学院 理学研究科）
+        photo: /images/members/imamura-sara.jpg
+      - name: 川内 紗英
+        position: 研修生（兵庫県立大学大学院 理学研究科）
+        photo: /images/members/kawauchi-sae.jpg
+      - name: 豊田 有唯
+        position: 研修生（兵庫県立大学 理学部）
+        photo: /images/members/toyoda-yui.jpg
+      - name: 原 七瀬
+        position: 研修生（兵庫県立大学 理学部）
+        photo: /images/members/hara-nanase.jpg
 
 # 分担研究者（グループを追加するときは「- name:」から members の終わりまでをコピー）
 groups:
@@ -31,11 +100,7 @@ groups:
     affiliation: 京都大学 大学院医学研究科
     position: 特定准教授
     role: 深層学習技術を用いたcryo-EMデータのイメージ解析技術の普及と高度化
-    # photo: /images/members/ファイル名.jpg
-    members:
-      - name: 氏名（仮）
-      - name: 氏名（仮）
-      - name: 氏名（仮）
+    photo: /images/members/matsumoto-shigeyuki.jpg
 
   - name: 加藤 貴之
     affiliation: 大阪大学 蛋白質研究所
@@ -51,10 +116,14 @@ groups:
     affiliation: 京都工芸繊維大学 応用生物学系
     position: 准教授
     role: 構造変化を伴う酵素反応を標的とした構造アンサンブル解析の適用
-    # photo: /images/members/ファイル名.jpg
+    photo: /images/members/kishikawa-junichi.jpg
     members:
-      - name: 氏名（仮）
-      - name: 氏名（仮）
+      - name: 畑中 涼
+        position: 博士課程学生
+        photo: /images/members/hatanaka-ryo.jpg
+      - name: 杉江 祥綺
+        position: 修士課程学生
+        photo: /images/members/sugie-shoki.jpg
 
   - name: 苙口 友隆
     affiliation: 慶應義塾大学 理工学部
@@ -68,19 +137,54 @@ groups:
     affiliation: 神戸大学 大学院科学技術イノベーション研究科
     position: 教授
     role: scFv等の抗体配列取得および試料調製・物性評価
-    # photo: /images/members/ファイル名.jpg
+    photo: /images/members/ishii-jun.jpg
     members:
-      - name: 氏名（仮）
-      - name: 氏名（仮）
+      - name: 伊藤 洋一郎
+        position: 特命准教授
+        photo: /images/members/ito-yoichiro.jpg
+      - name: 澤田 貴宏
+        position: 特命助教
+        photo: /images/members/sawada-takahiro.jpg
+      - name: 浅間 梨々花
+        position: 特命助教
+        photo: /images/members/asama-ririka.jpg
+      - name: 渡邉 直暉
+        position: 特命助教
+        photo: /images/members/watanabe-naoki.jpg
+      - name: 村田 昌浩
+        position: 特命助手
+        photo: /images/members/murata-masahiro.jpg
+      - name: 冨永 将大
+        position: 准教授
+        photo: /images/members/tominaga-masahiro.jpg
+      - name: 松本 雅輝
+        position: 博士前期課程2年
+        photo: /images/members/matsumoto-masaki.jpg
+      - name: 小谷 啓仁
+        position: 博士後期課程1年
+        photo: /images/members/odani-akito.jpg
+      - name: 根本 進太郎
+        position: 博士後期課程2年
+        photo: /images/members/nemoto-shintaro.jpg
 
   - name: 鎌田 真由美
     affiliation: 北里大学 未来工学部 データサイエンス学科
     position: 教授
     role: 多階層データベース設計／構築
-    # photo: /images/members/ファイル名.jpg
+    photo: /images/members/kamada-mayumi.jpg
     members:
-      - name: 氏名（仮）
-      - name: 氏名（仮）
+      - name: 牧垣 秀一朗
+        position: 助教
+        photo: /images/members/makigaki-shuichiro.jpg
+      - name: 三橋 広武
+        position: 学士課程学生
+        photo: /images/members/mihashi-hiromu.jpg
+      - name: 柏木 恒輝
+        position: 学士課程学生
+        photo: /images/members/kashiwagi-koki.jpg
+      - name: 増山 裕樹
+        position: 学士課程学生
+        photo: /images/members/masuyama-yuki.jpg
 
   - name: 庄屋 雄二
     affiliation: 株式会社ファーマフーズ 創薬本部 バイオメディカル部
