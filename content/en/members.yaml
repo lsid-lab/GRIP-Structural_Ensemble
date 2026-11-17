@@ -20,6 +20,12 @@ leader:
     - name: Tsutomu Yamane
       position: Senior Scientist
       photo: /images/members/yamane-tsutomu.jpg
+    - name: Kazuyoshi Ikeda
+      position: Unit Leader
+      photo: /images/members/ikeda-kazuyoshi.jpg
+    - name: Yugo Shimizu
+      position: Research Scientist
+      photo: /images/members/shimizu-yugo.jpg
     - name: Toshihiko Kai
       position: Unit Leader
       photo: /images/members/kai-toshihiko.jpg
@@ -31,16 +37,20 @@ leader:
       photo: /images/members/kaneyama-hidetomo.jpg
     - name: Ryo Kanada
       position: Senior Research Scientist
+      photo: /images/members/kanada-ryo.jpg
     - name: Hitoshi Murai
       position: Unit Leader
     - name: Motohiko Matsuda
       position: Technical Scientist
+      photo: /images/members/matsuda-motohiko.jpg
     - name: Sizhang Liu
       position: Technical Assistant
     - name: Biao Ma
       position: Research Scientist
+      photo: /images/members/ma-biao.jpg
     - name: Keiko Matsuoka
       position: Assistant
+      photo: /images/members/matsuoka-keiko.jpg
 
 lead_groups:
   - name: Nobutaka Shimizu
@@ -148,14 +158,6 @@ groups:
       - name: Yuki Masuyama
         position: Undergraduate Student
         photo: /images/members/masuyama-yuki.jpg
-  - name: Kazuyoshi Ikeda
-    affiliation: RIKEN Center for Computational Science
-    position: Unit Leader
-    photo: /images/members/ikeda-kazuyoshi.jpg
-    members:
-      - name: Yugo Shimizu
-        position: Research Scientist
-        photo: /images/members/shimizu-yugo.jpg
   - name: Yuji Shoya
     affiliation: Pharma Foods International Co., Ltd.
     position: Principal Researcher
