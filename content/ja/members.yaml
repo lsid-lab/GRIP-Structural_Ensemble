@@ -36,12 +36,6 @@ leader:
     - name: 山根 努
       position: 上級研究員
       photo: /images/members/yamane-tsutomu.jpg
-    - name: 池田 和由
-      position: ユニットリーダー
-      photo: /images/members/ikeda-kazuyoshi.jpg
-    - name: 清水 祐吾
-      position: 研究員
-      photo: /images/members/shimizu-yugo.jpg
     - name: 甲斐 俊彦
       position: ユニットリーダー
       photo: /images/members/kai-toshihiko.jpg
@@ -185,6 +179,16 @@ groups:
       - name: 増山 裕樹
         position: 学士課程学生
         photo: /images/members/masuyama-yuki.jpg
+
+  - name: 池田 和由
+    affiliation: 理化学研究所
+    position: ユニットリーダー
+    # role: （実施内容を記入）
+    photo: /images/members/ikeda-kazuyoshi.jpg
+    members:
+      - name: 清水 祐吾
+        position: 研究員
+        photo: /images/members/shimizu-yugo.jpg
 
   - name: 庄屋 雄二
     affiliation: 株式会社ファーマフーズ 創薬本部 バイオメディカル部

@@ -20,12 +20,6 @@ leader:
     - name: Tsutomu Yamane
       position: Senior Scientist
       photo: /images/members/yamane-tsutomu.jpg
-    - name: Kazuyoshi Ikeda
-      position: Unit Leader
-      photo: /images/members/ikeda-kazuyoshi.jpg
-    - name: Yugo Shimizu
-      position: Research Scientist
-      photo: /images/members/shimizu-yugo.jpg
     - name: Toshihiko Kai
       position: Unit Leader
       photo: /images/members/kai-toshihiko.jpg
@@ -154,6 +148,14 @@ groups:
       - name: Yuki Masuyama
         position: Undergraduate Student
         photo: /images/members/masuyama-yuki.jpg
+  - name: Kazuyoshi Ikeda
+    affiliation: RIKEN
+    position: Unit Leader
+    photo: /images/members/ikeda-kazuyoshi.jpg
+    members:
+      - name: Yugo Shimizu
+        position: Research Scientist
+        photo: /images/members/shimizu-yugo.jpg
   - name: Yuji Shoya
     affiliation: Pharma Foods International Co., Ltd.
     position: Principal Researcher
