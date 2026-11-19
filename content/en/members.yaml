@@ -87,9 +87,6 @@ groups:
     position: Program-Specific Associate Professor
     role: Dissemination and advancement of deep-learning-based cryo-EM image analysis
     photo: /images/members/matsumoto-shigeyuki.jpg
-    members:
-      - name: Seungeon Lee
-        position: Graduate Student
   - name: Takayuki Kato
     affiliation: Institute for Protein Research, Osaka University
     position: Professor
@@ -116,15 +113,10 @@ groups:
         position: Master's Student
         photo: /images/members/sugie-shoki.jpg
   - name: Tomotaka Oroguchi
-    affiliation: Faculty of Science and Technology, Keio University
-    position: Assistant Professor
-    role: Pilot demonstration and multi-probe extension of MBGD-MD-SAXS
+    affiliation: Department of Physics, Faculty of Science and Technology, Keio University
+    position: Lecturer
+    role: Application and multi-probe enhancement of the MBGD-MD-SAXS method for biomolecular structural ensemble analysis
     photo: /images/members/oroguchi-tomotaka.jpg
-    members:
-      - name: Shu Saito
-        position: Undergraduate Student
-      - name: Tetsuya Nomura
-        position: Undergraduate Student
   - name: Jun Ishii
     affiliation: Graduate School of Science, Technology and Innovation, Kobe University
     position: Professor
@@ -158,8 +150,6 @@ groups:
       - name: Shintaro Nemoto
         position: Ph.D. Student (2nd year)
         photo: /images/members/nemoto-shintaro.jpg
-      - name: Satomi Yamada
-        position: Secretary
   - name: Mayumi Kamada
     affiliation: Department of Data Science, School of Frontier Engineering, Kitasato University
     position: Professor

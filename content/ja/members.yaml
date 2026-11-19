@@ -105,9 +105,6 @@ groups:
     position: 特定准教授
     role: 深層学習技術を用いたcryo-EMデータのイメージ解析技術の普及と高度化
     photo: /images/members/matsumoto-shigeyuki.jpg
-    members:
-      - name: 李 昇彦
-        position: 大学院生
 
   - name: 加藤 貴之
     affiliation: 大阪大学 蛋白質研究所
@@ -138,15 +135,10 @@ groups:
         photo: /images/members/sugie-shoki.jpg
 
   - name: 苙口 友隆
-    affiliation: 慶應義塾大学 理工学部
+    affiliation: 慶應義塾大学 理工学部・物理学科
     position: 専任講師
     role: MBGD-MD-SAXS法による構造アンサンブル解析基盤の先導実証とマルチプローブ化による高度化
     photo: /images/members/oroguchi-tomotaka.jpg
-    members:
-      - name: 斎藤 柊
-        position: 学部生
-      - name: 野村 哲也
-        position: 学部生
 
   - name: 石井 純
     affiliation: 神戸大学 大学院科学技術イノベーション研究科
@@ -181,8 +173,6 @@ groups:
       - name: 根本 進太郎
         position: 博士後期課程2年
         photo: /images/members/nemoto-shintaro.jpg
-      - name: 山田 智美
-        position: 秘書
 
   - name: 鎌田 真由美
     affiliation: 北里大学 未来工学部 データサイエンス学科
