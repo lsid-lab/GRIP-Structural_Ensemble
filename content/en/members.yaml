@@ -87,10 +87,22 @@ groups:
     position: Program-Specific Associate Professor
     role: Dissemination and advancement of deep-learning-based cryo-EM image analysis
     photo: /images/members/matsumoto-shigeyuki.jpg
+    members:
+      - name: Seungeon Lee
+        position: Graduate Student
   - name: Takayuki Kato
     affiliation: Institute for Protein Research, Osaka University
     position: Professor
     role: Application of structural ensemble analysis to target proteins and complex systems
+    members:
+      - name: Mika Hirose
+        position: Technical Specialist
+      - name: Kanako Akamatsu
+        position: Specially Appointed Researcher
+      - name: Noa Ikeda
+        position: Master's Student
+      - name: Ami Jingo
+        position: Master's Student
   - name: Junichi Kishikawa
     affiliation: Faculty of Applied Biology, Kyoto Institute of Technology
     position: Associate Professor
@@ -107,6 +119,12 @@ groups:
     affiliation: Faculty of Science and Technology, Keio University
     position: Assistant Professor
     role: Pilot demonstration and multi-probe extension of MBGD-MD-SAXS
+    photo: /images/members/oroguchi-tomotaka.jpg
+    members:
+      - name: Shu Saito
+        position: Undergraduate Student
+      - name: Tetsuya Nomura
+        position: Undergraduate Student
   - name: Jun Ishii
     affiliation: Graduate School of Science, Technology and Innovation, Kobe University
     position: Professor
@@ -140,6 +158,8 @@ groups:
       - name: Shintaro Nemoto
         position: Ph.D. Student (2nd year)
         photo: /images/members/nemoto-shintaro.jpg
+      - name: Satomi Yamada
+        position: Secretary
   - name: Mayumi Kamada
     affiliation: Department of Data Science, School of Frontier Engineering, Kitasato University
     position: Professor
@@ -162,6 +182,7 @@ groups:
     affiliation: Pharma Foods International Co., Ltd.
     position: Principal Researcher
     role: scFv antibody acquisition by chicken immunization
+    photo: /images/members/shoya-yuji.jpg
 
 partners:
   - name: Japan Synchrotron Radiation Research Institute (JASRI)

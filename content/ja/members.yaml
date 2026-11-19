@@ -105,6 +105,9 @@ groups:
     position: 特定准教授
     role: 深層学習技術を用いたcryo-EMデータのイメージ解析技術の普及と高度化
     photo: /images/members/matsumoto-shigeyuki.jpg
+    members:
+      - name: 李 昇彦
+        position: 大学院生
 
   - name: 加藤 貴之
     affiliation: 大阪大学 蛋白質研究所
@@ -112,9 +115,14 @@ groups:
     role: 標的蛋白質への構造アンサンブル解析の適用と、細胞観測を目指した複雑系への展開
     # photo: /images/members/ファイル名.jpg
     members:
-      - name: 氏名（仮）
-      - name: 氏名（仮）
-      - name: 氏名（仮）
+      - name: 廣瀬 未果
+        position: 技術専門職員
+      - name: 赤松 香奈子
+        position: 特任研究員
+      - name: 池田 乃彩
+        position: 大学院生（修士）
+      - name: 神後 亜美
+        position: 大学院生（修士）
 
   - name: 岸川 淳一
     affiliation: 京都工芸繊維大学 応用生物学系
@@ -133,9 +141,12 @@ groups:
     affiliation: 慶應義塾大学 理工学部
     position: 専任講師
     role: MBGD-MD-SAXS法による構造アンサンブル解析基盤の先導実証とマルチプローブ化による高度化
-    # photo: /images/members/ファイル名.jpg
+    photo: /images/members/oroguchi-tomotaka.jpg
     members:
-      - name: 氏名（仮）
+      - name: 斎藤 柊
+        position: 学部生
+      - name: 野村 哲也
+        position: 学部生
 
   - name: 石井 純
     affiliation: 神戸大学 大学院科学技術イノベーション研究科
@@ -170,6 +181,8 @@ groups:
       - name: 根本 進太郎
         position: 博士後期課程2年
         photo: /images/members/nemoto-shintaro.jpg
+      - name: 山田 智美
+        position: 秘書
 
   - name: 鎌田 真由美
     affiliation: 北里大学 未来工学部 データサイエンス学科
@@ -194,7 +207,7 @@ groups:
     affiliation: 株式会社ファーマフーズ 創薬本部 バイオメディカル部
     position: 主席研究員
     role: ニワトリ免疫によるscFv抗体取得
-    # photo: /images/members/ファイル名.jpg
+    photo: /images/members/shoya-yuji.jpg
 
 # 連携機関（url は省略可）
 partners:
