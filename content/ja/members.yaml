@@ -110,16 +110,16 @@ groups:
     affiliation: 大阪大学 蛋白質研究所
     position: 教授
     role: 標的蛋白質への構造アンサンブル解析の適用と、細胞観測を目指した複雑系への展開
-    # photo: /images/members/ファイル名.jpg
+    photo: /images/members/kato-takayuki.jpg
     members:
       - name: 廣瀬 未果
-        position: 技術専門職員
+        position: 技術職員
       - name: 赤松 香奈子
         position: 特任研究員
       - name: 池田 乃彩
-        position: 大学院生（修士）
+        position: 博士前期課程2年
       - name: 神後 亜美
-        position: 大学院生（修士）
+        position: 博士前期課程1年
 
   - name: 岸川 淳一
     affiliation: 京都工芸繊維大学 応用生物学系

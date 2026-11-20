@@ -88,18 +88,19 @@ groups:
     role: Dissemination and advancement of deep-learning-based cryo-EM image analysis
     photo: /images/members/matsumoto-shigeyuki.jpg
   - name: Takayuki Kato
-    affiliation: Institute for Protein Research, Osaka University
+    affiliation: Institute for Protein Research, The University of Osaka
     position: Professor
-    role: Application of structural ensemble analysis to target proteins and complex systems
+    role: Application of structural ensemble analysis to target proteins and its extension to complex systems toward cellular observation
+    photo: /images/members/kato-takayuki.jpg
     members:
       - name: Mika Hirose
-        position: Technical Specialist
+        position: Technical Staff
       - name: Kanako Akamatsu
         position: Specially Appointed Researcher
       - name: Noa Ikeda
-        position: Master's Student
+        position: Master's Program, 2nd Year
       - name: Ami Jingo
-        position: Master's Student
+        position: Master's Program, 1st Year
   - name: Junichi Kishikawa
     affiliation: Faculty of Applied Biology, Kyoto Institute of Technology
     position: Associate Professor
