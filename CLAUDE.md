@@ -8,7 +8,7 @@ Vite + React で、ビルド時に全ページを静的HTMLとして書き出す
 - `main` に push すると `.github/workflows/deploy.yml` が GitHub Pages に自動で公開する
   → https://lsid-lab.github.io/GRIP-Structural_Ensemble/
 - 内部共有中のため `content/site.yaml` を `noindex: true` にしている。正式公開時に `false` にする
-- 理研サーバー（hudtech.r-ccs.riken.jp:/var/www/ace/sec/、踏み台 mng-2-1.r-ccs.riken.jp）へは `uvx --from ansible-core ansible-playbook -i deploy/inventory.yml deploy/riken.yml`（ユーザー makigaki）。いずれ GitHub Actions に移す予定
+- 理研サーバー（hudtech.r-ccs.riken.jp:/var/www/ace/sec/、踏み台 mng-2-1.r-ccs.riken.jp）へは `uvx --python 3.12 --from 'ansible-core<2.17' ansible-playbook -i deploy/inventory.yml deploy/riken.yml`（ユーザー makigaki）。いずれ GitHub Actions に移す予定
 
 ## 構成
 - `content/` … 文章の元データ（`site.yaml`、`ja/`・`en/` の news / outreach / members（YAML）、greeting / overview（Markdown＋先頭の設定部分 frontmatter））

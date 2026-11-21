@@ -1,5 +1,6 @@
 # 理研サーバーへのデプロイ
-#   uvx --from ansible-core ansible-playbook -i deploy/inventory.yml deploy/riken.yml
+#   uvx --python 3.12 --from 'ansible-core<2.17' ansible-playbook -i deploy/inventory.yml deploy/riken.yml
+#   （サーバーの Python が 3.6 のため、3.6 に対応する最後の ansible-core 2.16 に固定）
 # オプション：
 #   --check                 … 何が変わるかだけ表示（rsync --dry-run）
 #   -e skip_build=true      … ビルドを省略して今の dist/ をそのまま送る
@@ -29,20 +30,28 @@
       register: built
       failed_when: not built.stat.exists
 
+    # rsync -p で権限ごと送るので、手元で 755/644 にそろえておく
+    # （macOS 標準の openrsync は --chmod を無視するため）
+    - name: dist/ の権限をそろえる
+      ansible.builtin.command:
+        argv: [chmod, -R, "u=rwX,go=rX", "{{ repo_root }}/dist"]
+      check_mode: false
+      changed_when: false
+
 - name: 理研サーバーに配置
   hosts: riken
   gather_facts: false
   vars:
     repo_root: "{{ playbook_dir }}/.."
   tasks:
-    # /var/www は root の持ち物なので作成だけ sudo。以降の rsync は ace-sep グループの権限で書く
+    # /var/www は root の持ち物なので作成だけ sudo。以降の rsync は所有者（ansible_user）の権限で書く
     - name: 配置先ディレクトリがあること
       ansible.builtin.file:
         path: "{{ deploy_dir }}"
         state: directory
         owner: "{{ ansible_user }}"
         group: ace-sep
-        mode: "2775"
+        mode: "0755"
       become: true
 
     # synchronize モジュールは踏み台(ProxyJump)の扱いが不安定なので、rsync を直接呼ぶ
@@ -52,10 +61,9 @@
       vars:
         rsync_argv:
           - rsync
-          - -rltz
+          - -rltpz
           - --omit-dir-times
           - --delete
-          - --chmod=D755,F644
           - --itemize-changes
           - -e
           - "ssh {{ ansible_ssh_common_args }}"
