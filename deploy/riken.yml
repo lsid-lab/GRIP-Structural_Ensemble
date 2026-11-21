@@ -1,0 +1,76 @@
+# 理研サーバーへのデプロイ
+#   uvx --from ansible-core ansible-playbook -i deploy/inventory.yml deploy/riken.yml
+# オプション：
+#   --check                 … 何が変わるかだけ表示（rsync --dry-run）
+#   -e skip_build=true      … ビルドを省略して今の dist/ をそのまま送る
+#   -e base_path=/sec/      … 公開URLのパスを変える
+
+- name: ビルド（理研サーバー用の BASE_PATH で）
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  vars:
+    repo_root: "{{ playbook_dir }}/.."
+    target: "{{ groups['riken'][0] }}"
+  tasks:
+    - name: npm run build
+      ansible.builtin.command:
+        cmd: npm run build
+        chdir: "{{ repo_root }}"
+      environment:
+        BASE_PATH: "{{ base_path | default(hostvars[target].base_path) }}"
+      check_mode: false
+      changed_when: true
+      when: not (skip_build | default(false) | bool)
+
+    - name: dist/index.html があることを確認
+      ansible.builtin.stat:
+        path: "{{ repo_root }}/dist/index.html"
+      register: built
+      failed_when: not built.stat.exists
+
+- name: 理研サーバーに配置
+  hosts: riken
+  gather_facts: false
+  vars:
+    repo_root: "{{ playbook_dir }}/.."
+  tasks:
+    # /var/www は root の持ち物なので作成だけ sudo。以降の rsync は ace-sep グループの権限で書く
+    - name: 配置先ディレクトリがあること
+      ansible.builtin.file:
+        path: "{{ deploy_dir }}"
+        state: directory
+        owner: "{{ ansible_user }}"
+        group: ace-sep
+        mode: "2775"
+      become: true
+
+    # synchronize モジュールは踏み台(ProxyJump)の扱いが不安定なので、rsync を直接呼ぶ
+    - name: dist/ を rsync（サーバー側の余分なファイルは削除）
+      ansible.builtin.command:
+        argv: "{{ rsync_argv + (['--dry-run'] if ansible_check_mode else []) + [repo_root ~ '/dist/', ansible_user ~ '@' ~ inventory_hostname ~ ':' ~ deploy_dir] }}"
+      vars:
+        rsync_argv:
+          - rsync
+          - -rltz
+          - --omit-dir-times
+          - --delete
+          - --chmod=D755,F644
+          - --itemize-changes
+          - -e
+          - "ssh {{ ansible_ssh_common_args }}"
+      delegate_to: localhost
+      check_mode: false
+      register: rsync_out
+      changed_when: rsync_out.stdout | length > 0
+
+    - name: 変更されたファイル
+      ansible.builtin.debug:
+        var: rsync_out.stdout_lines
+      when: rsync_out.stdout | length > 0
+
+    - name: index.html が置かれたことを確認
+      ansible.builtin.stat:
+        path: "{{ deploy_dir }}/index.html"
+      register: remote_index
+      failed_when: not ansible_check_mode and not remote_index.stat.exists

@@ -1,0 +1,13 @@
+# 理研サーバー（R-CCS）へのデプロイ設定。手順は README.md の「理研サーバー」を参照
+riken:
+  hosts:
+    hudtech.r-ccs.riken.jp:
+  vars:
+    # 接続ユーザー。別アカウントで実行するときは -e ansible_user=xxx（inventory の値は -u より優先されるため）
+    ansible_user: makigaki
+    # 踏み台経由で接続。%r は接続先と同じユーザー名（踏み台でも同じアカウントを使う）
+    ansible_ssh_common_args: -o ProxyCommand="ssh -W %h:%p %r@mng-2-1.r-ccs.riken.jp"
+
+    # 置き場所と、ブラウザから見たときのパス（ビルド時の BASE_PATH になる）
+    deploy_dir: /var/www/ace/sec/
+    base_path: /ace/sec/
