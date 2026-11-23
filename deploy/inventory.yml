@@ -9,5 +9,5 @@ riken:
     ansible_ssh_common_args: -o ProxyCommand="ssh -W %h:%p %r@mng-2-1.r-ccs.riken.jp"
 
     # 置き場所と、ブラウザから見たときのパス（ビルド時の BASE_PATH になる）
-    deploy_dir: /var/www/ace/sec/
-    base_path: /ace/sec/
+    deploy_dir: /var/www/ace/sep/
+    base_path: /ace/sep/
