@@ -29,7 +29,7 @@ BASE_PATH=/ npm run build      # サブディレクトリに置く場合は BASE
 ```
 `dist/` の中身をそのままアップロードします。正式公開時は `noindex: false` にします。
 
-#### Ansible でデプロイ（hudtech.r-ccs.riken.jp:/var/www/ace/sec/）
+#### Ansible でデプロイ（hudtech.r-ccs.riken.jp:/var/www/ace/sep/）
 踏み台 `mng-2-1.r-ccs.riken.jp` 経由で、ビルド → `rsync --delete` まで一括で行います。設定は `deploy/inventory.yml`。
 ```
 brew install uv                            # 初回のみ。Ansible は uvx が自動で取得する
@@ -37,7 +37,7 @@ uvx --python 3.12 --from 'ansible-core<2.17' ansible-playbook -i deploy/inventor
 uvx --python 3.12 --from 'ansible-core<2.17' ansible-playbook -i deploy/inventory.yml deploy/riken.yml --check  # 変更点の確認だけ
 ```
 - 接続ユーザーは `makigaki`（`deploy/inventory.yml`）。別アカウントなら `-e ansible_user=xxx`
-- 公開URLのパス（`BASE_PATH`）は `deploy/inventory.yml` の `base_path`（既定 `/ace/sec/`）
+- 公開URLのパス（`BASE_PATH`）は `deploy/inventory.yml` の `base_path`（既定 `/ace/sep/`）
 
 ## 構成
 ```

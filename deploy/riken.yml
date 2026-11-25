@@ -4,7 +4,7 @@
 # オプション：
 #   --check                 … 何が変わるかだけ表示（rsync --dry-run）
 #   -e skip_build=true      … ビルドを省略して今の dist/ をそのまま送る
-#   -e base_path=/sec/      … 公開URLのパスを変える
+#   -e base_path=/ace/sep/  … 公開URLのパスを変える
 
 - name: ビルド（理研サーバー用の BASE_PATH で）
   hosts: localhost
